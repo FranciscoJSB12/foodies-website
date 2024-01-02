@@ -3,18 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  a:hover {
-    color: #f9572a;
-  }
 }
 
 .headerLogo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +24,10 @@
     width: 80px;
     height: 80px;
   }
+}
+
+.headerLogo:hover {
+  color: #f9572a;
 }
 
 .headerNavbar {
