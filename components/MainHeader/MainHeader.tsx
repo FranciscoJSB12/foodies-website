@@ -2,15 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import logoImg from "@/assets/logo.png";
 import classes from "./MainHeader.module.scss";
-import { NavLink } from "../NavLink";
+import { NavLink } from "../NavLink/NavLink";
 
 export function MainHeader() {
   return (
     <header className={classes.header}>
-      <Link className={classes.headerLogo} href="/">
-        <Image src={logoImg} alt="A plate with food on it" priority />
-        <span>NextLevel Food</span>
-      </Link>
+      <NavLink href="/">
+        <span className={classes.headerLogo}>
+          <Image
+            src={logoImg}
+            alt="A plate with food on it"
+            className={classes.logoImg}
+            priority
+          />
+          NextLevel Food
+        </span>
+      </NavLink>
       <nav className={classes.headerNavbar}>
         <ul>
           <li>

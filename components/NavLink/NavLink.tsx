@@ -12,11 +12,24 @@ interface NavLinkProps {
 export function NavLink({ children, href }: NavLinkProps) {
   const path = usePathname();
 
+  if (href === "/") {
+    return (
+      <Link
+        href={href}
+        className={
+          href === path ? `${classes.link} ${classes.active}` : classes.link
+        }
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <Link
       href={href}
       className={
-        href === path.slice(0, href.length)
+        path.startsWith(href)
           ? `${classes.link} ${classes.active}`
           : classes.link
       }

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { ImageSlideShow } from "@/components/ImageSlideShow";
+import { ImageSlideShow } from "@/components/ImageSlideShow/ImageSlideShow";
 import classes from "./page.module.scss";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <header className={classes.header}>

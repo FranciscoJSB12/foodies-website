@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
-import { MainHeader } from "@/components/MainHeader";
+import { MainHeader } from "@/components/MainHeader/MainHeader";
 import "./globals.scss";
 
 const quicksand = Quicksand({
